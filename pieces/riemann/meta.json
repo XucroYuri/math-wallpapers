@@ -1,0 +1,10 @@
+{
+  "title": "临界线",
+  "problem": "黎曼猜想",
+  "tagline": "ζ(1/2+it) 与素数阶梯",
+  "description": "临界线上的 ζ 曲线在零点处亮起，素数阶梯随显式公式的项数逐渐显形。",
+  "duration": 30,
+  "tech": "Canvas 2D",
+  "order": 1,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

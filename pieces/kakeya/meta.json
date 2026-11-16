@@ -1,0 +1,10 @@
+{
+  "title": "针的星云",
+  "problem": "Kakeya 猜想",
+  "tagline": "所有方向的针，几乎为空的并集",
+  "description": "十一万八千根短针各指一方，叠成缓慢旋转的青紫色星云，在暗处留下几乎空无的孔洞。",
+  "duration": 30,
+  "tech": "Three.js",
+  "order": 9,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

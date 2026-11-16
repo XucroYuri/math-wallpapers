@@ -1,0 +1,10 @@
+{
+  "title": "标题",
+  "problem": "数学问题",
+  "tagline": "一句话视觉母题",
+  "description": "一句话说明屏幕上正在发生什么。",
+  "duration": 24,
+  "tech": "Canvas 2D",
+  "order": 999,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

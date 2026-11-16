@@ -1,0 +1,10 @@
+{
+  "title": "椭圆曲线的星座",
+  "problem": "Birch–Swinnerton-Dyer 猜想",
+  "tagline": "有理点、群律与 L 函数",
+  "description": "椭圆曲线 y² = x³ − 2 上的有理点以星子相连，弦–切线群律在暗色坐标中展开，右侧是复环面与 L 函数消失阶的极简示意。",
+  "duration": 30,
+  "tech": "Canvas 2D",
+  "order": 7,
+  "palette": ["#05070a", "#7ef0d4", "#f0c674"]
+}

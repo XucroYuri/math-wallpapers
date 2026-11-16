@@ -1,0 +1,10 @@
+{
+  "title": "素数天空",
+  "problem": "Goldbach 猜想 / 孪生素数猜想",
+  "tagline": "Goldbach 彗星与孪生素数星座",
+  "description": "素数在斐波那契盘面上缓慢旋转，孪生素数结成星座，Goldbach 彗星沿 2n = p + q 的素数对计数扫过夜空。",
+  "duration": 30,
+  "tech": "Canvas 2D",
+  "order": 5,
+  "palette": ["#7ef0d4", "#c8a2ff", "#f0c674"]
+}

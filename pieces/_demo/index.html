@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Demo · 临界线</title>
+  <link rel="stylesheet" href="../../shared/base.css">
+</head>
+<body>
+<script type="module">
+import { createWallpaper } from '../../shared/wallpaper.js';
+
+createWallpaper({
+  duration: 12,
+  context: '2d',
+  background: '#05070a',
+  draw({ ctx, width, height }, t) {
+    ctx.fillStyle = '#05070a';
+    ctx.fillRect(0, 0, width, height);
+    ctx.strokeStyle = '#7ef0d4';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let i = 0; i < 240; i++) {
+      const x = (i / 239) * width;
+      const y = height * 0.5 + Math.sin(i * 0.055 + t * 2.2) * height * 0.16;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  },
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "title": "流形的呼吸",
+  "problem": "Poincaré 猜想 / Ricci flow",
+  "tagline": "neckpinch 与手术",
+  "description": "哑铃形曲面在 Ricci 流下颈部收缩、断裂，随后手术补成两个球面，最后淡回起点。（曲面视觉代理，非 3D 流形数值解）",
+  "duration": 30,
+  "tech": "Three.js",
+  "order": 8,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

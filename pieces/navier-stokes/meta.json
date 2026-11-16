@@ -1,0 +1,10 @@
+{
+  "title": "涡量天气",
+  "problem": "Navier–Stokes 存在性与光滑性",
+  "tagline": "涡量细丝与爆破解监测器",
+  "description": "暗色不可压涡量场中，细丝被拉伸、卷起、折叠；角落的极简监测器记录 ‖ω‖∞ 与 enstrophy 的缓慢爬升和偶发尖峰。",
+  "duration": 30,
+  "tech": "WebGL2 / Canvas2D",
+  "order": 2,
+  "palette": ["#05070a", "#7ef0d4", "#ff6fb0"]
+}

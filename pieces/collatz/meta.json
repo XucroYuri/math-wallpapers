@@ -1,0 +1,10 @@
+{
+  "title": "冰雹树",
+  "problem": "Collatz 猜想",
+  "tagline": "3n+1 逆向树与已知边界",
+  "description": "从 1 反向生长的 Collatz 树，托住三条坠向根部的著名冰雹轨迹。",
+  "duration": 36,
+  "tech": "Three.js",
+  "order": 4,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "通量管",
+  "problem": "Yang–Mills 存在性与质量间隙",
+  "tagline": "SU(3) 格点与线性势",
+  "description": "半透明的 SU(3) 格点时间切片铺满背景，一根随夸克间距变细、变亮的通量管贯穿其中，最低驻波模式标出质量间隙。",
+  "duration": 30,
+  "tech": "Three.js",
+  "order": 6,
+  "palette": ["#05070a", "#7ef0d4", "#c8a2ff"]
+}

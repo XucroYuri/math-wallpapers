@@ -1,0 +1,10 @@
+{
+  "title": "巡回者的困境",
+  "problem": "P vs NP",
+  "tagline": "TSP 回路与下界差距",
+  "description": "800 座城市在 2-opt 下缓慢解开交叉，右侧差距尺显示回路相对 MST 下界的余量。",
+  "duration": 30,
+  "tech": "Canvas 2D",
+  "order": 3,
+  "palette": ["#05070a", "#7ef0d4", "#f0c674"]
+}
