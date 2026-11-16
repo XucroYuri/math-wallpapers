@@ -57,7 +57,10 @@ const url = `${base}/pieces/${slug}/?capture=1`;
     await page.waitForFunction(() => window.__wp !== undefined, null, { timeout: 60000 });
     await page.evaluate(() => window.__wp.ready);
 
-    const downloadPromise = page.waitForEvent('download', { timeout: seconds * 1000 + 60000 });
+    page.setDefaultTimeout(Math.max(180000, seconds * 40000));
+    const downloadPromise = page.waitForEvent('download', {
+      timeout: Math.max(180000, seconds * 40000),
+    });
     await page.evaluate(
       async ({ duration, fps }) => {
         const canvas = window.__wp.canvas;

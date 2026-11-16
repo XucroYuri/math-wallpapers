@@ -29,29 +29,22 @@ for _, slug, duration in sorted(items):
 PY
 )
 
-encode() {
-  local webm="$1" mp4="$2"
-  if ffmpeg -y -hide_banner -loglevel error -i "$webm" \
-      -an -c:v h264_nvenc -preset p5 -cq 20 -pix_fmt yuv420p -movflags +faststart "$mp4"; then
-    return 0
-  fi
-  ffmpeg -y -hide_banner -loglevel error -i "$webm" \
-    -an -c:v libx264 -preset veryfast -crf 18 -pix_fmt yuv420p -movflags +faststart "$mp4"
-}
-
 for row in "${ROWS[@]}"; do
   slug="${row%% *}"
   seconds="${row##* }"
-  webm="$OUT/$slug.webm"
   mp4="$OUT/$slug.mp4"
   echo "=== $slug ${seconds}s ${WIDTH}x${HEIGHT}"
-  node tools/record.js "$slug" "$seconds" "$webm" "$WIDTH" "$HEIGHT" "$FPS" || true
-  if [[ ! -s "$webm" ]]; then
-    echo "missing $webm" >&2
+  if ! node tools/record-mp4.js "$slug" "$seconds" "$mp4" "$WIDTH" "$HEIGHT" "$FPS"; then
+    echo "FAILED $slug" >&2
     continue
   fi
-  encode "$webm" "$mp4"
   ffmpeg -y -hide_banner -loglevel error -ss 4 -i "$mp4" -frames:v 1 -q:v 3 "$OUT/$slug-thumb.jpg"
-  rm -f "$webm"
+  bg="${HOME}/.local/share/gnome-wallpaper-engine/backgrounds"
+  mkdir -p "$bg"
+  cp -f "$mp4" "$bg/${slug}.mp4"
+  cp -f "$OUT/$slug-thumb.jpg" "$bg/${slug}-thumb.jpg"
+  if [[ "$slug" == "riemann" ]]; then
+    bash tools/use-wallpaper.sh riemann
+  fi
   echo "ready $mp4"
 done
